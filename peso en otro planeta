@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+
+  <title>Calculadora de peso en Marte y Jupiter</title>
+</head>
+<body>
+    <h1> Tu peso en otro planeta<h1>
+  <p> En la tierra pesas distinto que en Marte y Jupiter<p>
+  <script>
+
+  var usuario = prompt("Cuál es tu peso en la tierra: ");
+  var planeta = prompt("Cuál es tu planeta:\n elige 1 para opcion marte 2 para jupiter" );
+   var peso=parseFloat(usuario);
+  var planeta = parseInt(planeta);
+  var g_tierra = 9.8;
+  var g_marte  = 3.7;
+  var g_jupiter = 24.8;
+  var peso_final;
+  var ruta = window.location
+  var nombre;
+      if(planeta == 1)
+
+  {
+   peso_final= peso * g_marte/g_tierra;
+   nombre = "Marte";
+
+ }
+
+ else if (planeta == 2)
+ {
+   peso_final= peso * g_jupiter / g_tierra;
+   nombre = "Jupiter";
+ }
+ else
+  {
+    peso_final= peso * 10000;
+    nombre= "kripton"
+ }
+  peso_final = parseInt(peso_final);
+      document.write("\n tu peso en " + nombre +"\n es \n" + peso_final +"\n Kgs\n");
+      document.write("\nEstas en: \n" + ruta);
+  </script>
+  
