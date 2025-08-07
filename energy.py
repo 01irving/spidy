@@ -129,17 +129,17 @@ if st.button("Calcular Gasto Energético"):
         # Métricas principales
         col1, col2, col3 = st.columns(3)
         col1.metric("Metabolismo Basal (BMR)", f"{bmr:.0f} kcal")
-        col2.metric("Gasto por Actividad", f"{componente_actividad:.0f} kcal")
+        col2.metric("Gasto por Actividad o ejercicio", f"{componente_actividad:.0f} kcal")
         col3.metric("Gasto Total 24h (TEE)", f"{tee_total:.0f} kcal", delta_color="off")
         
         # Desglose detallado
         with st.expander("🔍 Ver desglose detallado"):
             st.markdown(f"""
             **Descomposición del cálculo:**
-            - **Horas de reposo:** {horas_reposo:.1f}h
-            - **Horas de actividad:** {horas_actividad:.1f}h
-            - **Componente reposo:** {bmr:.0f} × {pal} × ({horas_reposo:.1f}/24) = {componente_reposo:.0f} kcal
-            - **Componente actividad:** {mets} METs × {peso}kg × {horas_actividad:.1f}h = {componente_actividad:.0f} kcal
+            - **Horas de actividad no relacionada al ejercicio y sueño:** {horas_reposo:.1f}h
+           - **Componente reposo:** {bmr:.0f} × {pal} × ({horas_reposo:.1f}/24) = {componente_reposo:.0f} kcal
+          - **Horas de ejercicio o actividad:** {horas_ejercicio:.1f}h
+            - **Componente actividad física:** {mets} METs × {peso}kg × {horas_actividad:.1f}h = {componente_actividad:.0f} kcal
             """)
             
     except Exception as e:
@@ -151,7 +151,7 @@ st.markdown("""
 **Notas importantes:**
 1. Los cálculos son estimaciones basadas en ecuaciones estándar
 2. Para mayor precisión, consultar con un profesional de nutrición
-3. El PAL se aplica solo al tiempo de reposo
+3. El PAL se aplica a las horas dedicadas a actividades no relacionadas al ejercicio y al sueño
 4. Los valores de METs son promedios de referencia
 5. Considerar variaciones individuales en el metabolismo
 """)
