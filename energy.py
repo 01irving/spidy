@@ -136,8 +136,8 @@ if st.button("Calcular Gasto Energético"):
         with st.expander("🔍 Ver desglose detallado"):
             st.markdown(f"""
             **Descomposición del cálculo:**
-            - **Horas de actividad no relacionada al ejercicio y sueño:** {horas_reposo:.1f}h
-           - **Componente actividad física no relacionada al ejercicio:** {bmr:.0f} × {pal} × ({horas_reposo:.1f}/24) = {componente_reposo:.0f} kcal
+            - **Horas de actividad general y sueño:** {horas_reposo:.1f}h
+           - **Componente de actividad general y sueño:** {bmr:.0f} × {pal} × ({horas_reposo:.1f}/24) = {componente_reposo:.0f} kcal
           - **Horas de ejercicio:** {horas_actividad:.1f}h
             - **Componente ejercicio:** {mets} METs × {peso}kg × {horas_actividad:.1f}h = {componente_actividad:.0f} kcal
             """)
