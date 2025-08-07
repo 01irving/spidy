@@ -138,7 +138,7 @@ if st.button("Calcular Gasto Energético"):
             **Descomposición del cálculo:**
             - **Horas de actividad no relacionada al ejercicio y sueño:** {horas_reposo:.1f}h
            - **Componente actividad física no relacionada al ejercicio:** {bmr:.0f} × {pal} × ({horas_reposo:.1f}/24) = {componente_reposo:.0f} kcal
-          - **Horas de ejercicio:** {horas_ejercicio:.1f}h
+          - **Horas de ejercicio:** {horas_actividad:.1f}h
             - **Componente ejercicio:** {mets} METs × {peso}kg × {horas_actividad:.1f}h = {componente_actividad:.0f} kcal
             """)
             
